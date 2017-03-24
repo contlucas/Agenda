@@ -75,8 +75,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="contactos\create.aspx" />
+    <Content Include="Content\css\app.css" />
     <Content Include="Content\css\bootstrap-theme.min.css" />
     <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\img\background.jpg" />
     <Content Include="Content\img\book.png" />
     <Content Include="packages.config" />
     <Content Include="master.Master" />
