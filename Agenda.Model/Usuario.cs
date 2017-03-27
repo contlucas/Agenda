@@ -12,13 +12,12 @@ namespace Agenda.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class Contacto
+    public partial class Usuario
     {
         public int ID { get; set; }
         public string Nombre { get; set; }
-        public string Apellido { get; set; }
-        public int Edad { get; set; }
-        public string Usuario { get; set; }
+        public string Password { get; set; }
         public System.DateTime FechaCreacion { get; set; }
+        public string Activo { get; set; }
     }
 }

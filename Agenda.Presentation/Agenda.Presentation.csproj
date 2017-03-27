@@ -15,7 +15,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Agenda.Presentation</RootNamespace>
     <AssemblyName>Agenda.Presentation</AssemblyName>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
@@ -24,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -56,22 +57,21 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="contactos\create.aspx" />
@@ -80,6 +80,7 @@
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\img\background.jpg" />
     <Content Include="Content\img\book.png" />
+    <Content Include="login.aspx" />
     <Content Include="packages.config" />
     <Content Include="master.Master" />
     <None Include="Properties\PublishProfiles\agendaProfile.pubxml" />
@@ -126,6 +127,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="IAccionPage.cs" />
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="master.Master.cs">
       <DependentUpon>master.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -150,6 +158,10 @@
     <ProjectReference Include="..\Agenda.Model\Agenda.Model.csproj">
       <Project>{b1d27902-a8d4-4eeb-a7c3-3a8c14b810fb}</Project>
       <Name>Agenda.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Agenda.Seguridad\Agenda.Seguridad.csproj">
+      <Project>{5a6ce053-8fdb-4e0b-92bf-9c3af005ba2f}</Project>
+      <Name>Agenda.Seguridad</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

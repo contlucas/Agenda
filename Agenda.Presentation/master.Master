@@ -15,26 +15,33 @@
 </head>
 <body style="padding-top: 60px;">
     <form id="form1" runat="server">
-        <div class="container">
-            <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex6-collapse">
+                    <span class="sr-only">Desplegar navegación</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex6-collapse">
-                        <span class="sr-only">Desplegar navegación</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
                     <asp:HyperLink runat="server" NavigateUrl="~/default.aspx" ToolTip="Home" CssClass="navbar-left">
                         <asp:Image runat="server" ImageUrl="~/Content/img/book.png" Height="50" AlternateText="Home"/>
                     </asp:HyperLink>
                 </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <asp:LinkButton ID="lbCerrarSesion" runat="server" OnClick="lbCerrarSesion_Click">Cerrar sesión</asp:LinkButton>
+                    </li>
+                </ul>
                 <div class="collapse navbar-collapse navbar-ex6-collapse">
                     <ul class="nav navbar-nav">
                         <li>
-                            <asp:HyperLink ID="hlContactos" runat="server" NavigateUrl="~/contactos/contactos.aspx">Contactos</asp:HyperLink></li>
+                            <asp:HyperLink runat="server" NavigateUrl="~/contactos/contactos.aspx">Contactos</asp:HyperLink></li>
                     </ul>
                 </div>
-            </nav>
+            </div>
+        </nav>
+        <div class="container">
             <asp:ContentPlaceHolder ID="content" runat="server">
             </asp:ContentPlaceHolder>
         </div>
