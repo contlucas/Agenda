@@ -11,8 +11,8 @@ namespace Agenda.Consola
     {
         static void Main(string[] args)
         {
-            var result = SeguridadA.Autenticar("admin", "Admin1");
-            var some = SeguridadA.EncriptarPassword("Admin1", Algoritmo.SHA1);
+            var result = GestorSeguridad.Autenticar("admin", "Admin1");
+            var some = GestorSeguridad.EncriptarPassword("Admin1", Algoritmo.SHA1);
         }
     }
 }

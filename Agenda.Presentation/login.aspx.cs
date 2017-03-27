@@ -22,7 +22,7 @@ namespace Agenda.Presentation
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            if (SeguridadA.Autenticar(this.txtUsuario.Text, this.txtPassword.Text))
+            if (GestorSeguridad.Autenticar(this.txtUsuario.Text, this.txtPassword.Text))
             {
                 FormsAuthentication.RedirectFromLoginPage(this.txtUsuario.Text, this.chkRemberMe.Checked);
             }

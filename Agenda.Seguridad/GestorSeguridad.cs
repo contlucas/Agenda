@@ -9,7 +9,7 @@ using Agenda.Model;
 
 namespace Agenda.Seguridad
 {
-    public class SeguridadA
+    public class GestorSeguridad
     {
         public static bool Autenticar(string usuario, string password)
         {

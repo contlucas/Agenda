@@ -15,7 +15,7 @@
 </head>
 <body style="padding-top: 60px;">
     <form id="form1" runat="server">
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container-fluid">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex6-collapse">
                     <span class="sr-only">Desplegar navegación</span>
@@ -45,6 +45,11 @@
             <asp:ContentPlaceHolder ID="content" runat="server">
             </asp:ContentPlaceHolder>
         </div>
+        <footer class="navbar navbar-default navbar-fixed-bottom">
+            <div class="container-fluid text-center">
+                © <%= DateTime.Today.Year %> LMC - POS Software 
+            </div>
+        </footer>
     </form>
 </body>
 </html>
