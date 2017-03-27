@@ -1,14 +1,9 @@
-﻿<%@ Page Title="Contactos" Language="C#" MasterPageFile="~/master.Master" AutoEventWireup="true" CodeBehind="contactos.aspx.cs"
-    Inherits="Agenda.Presentation.contactos.contactos"
-    EnableEventValidation="false" %>
+﻿<%@ Page Title="Contactos" Language="C#" MasterPageFile="~/child.master" AutoEventWireup="true" CodeBehind="contactos.aspx.cs" Inherits="Agenda.Presentation.contactos.contactos" %>
 
 <%@ Register Src="~/UserControl/delete-modal.ascx" TagPrefix="modal" TagName="delete" %>
 <asp:Content ContentPlaceHolderID="head" runat="server">
-    <script type="text/javascript">
-        function deleteContacto(id) { $("#hdmValue").val(id); }
-    </script>
 </asp:Content>
-<asp:Content ContentPlaceHolderID="content" runat="server" ClientIDMode="Static">
+<asp:Content ContentPlaceHolderID="content" runat="server">
     <modal:delete runat="server"
         ModalID="modalContactos"
         ModalTitulo="Contactos"

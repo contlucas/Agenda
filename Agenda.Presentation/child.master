@@ -1,0 +1,41 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/base.Master" AutoEventWireup="true" CodeBehind="child.master.cs" Inherits="Agenda.Presentation.child" %>
+
+<asp:Content ContentPlaceHolderID="head" runat="server">
+    <asp:ContentPlaceHolder ID="head" runat="server" ClientIDMode="Static">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ContentPlaceHolderID="content" runat="server">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex6-collapse">
+                <span class="sr-only">Desplegar navegación</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="navbar-header">
+                <asp:HyperLink runat="server" NavigateUrl="~/default.aspx" ToolTip="Home" CssClass="navbar-left">
+                        <asp:Image runat="server" ImageUrl="~/Content/img/book.png" Height="50" AlternateText="Home"/>
+                </asp:HyperLink>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <asp:LinkButton ID="lblCerrar" runat="server" OnClick="lblCerrar_Click">Cerrar sesión</asp:LinkButton>
+                </li>
+            </ul>
+            <div class="collapse navbar-collapse navbar-ex6-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <asp:HyperLink runat="server" NavigateUrl="~/contactos/contactos.aspx">Contactos</asp:HyperLink></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <asp:ContentPlaceHolder ID="content" runat="server" ClientIDMode="Static">
+    </asp:ContentPlaceHolder>
+    <footer class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container-fluid text-center">
+            © <%= DateTime.Today.Year %> LMC - POS Software 
+        </div>
+    </footer>
+</asp:Content>

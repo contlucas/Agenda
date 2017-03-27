@@ -4,9 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Agenda.Model;
 using System.Web.ModelBinding;
 using System.Web.Security;
+using Agenda.Model;
 
 namespace Agenda.Presentation.contactos
 {
@@ -36,11 +36,7 @@ namespace Agenda.Presentation.contactos
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (User.Identity.IsAuthenticated == false)
-            {
-                FormsAuthentication.RedirectToLoginPage();
-            }
-            else
+            if (User.Identity.IsAuthenticated)
             {
                 if (this.isEditMode)
                 {
@@ -59,6 +55,10 @@ namespace Agenda.Presentation.contactos
                         }
                     }
                 }
+            }
+            else
+            {
+                FormsAuthentication.RedirectToLoginPage();
             }
         }
 

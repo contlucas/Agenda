@@ -74,15 +74,20 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="contactos\contactos.aspx" />
     <Content Include="contactos\create.aspx" />
     <Content Include="Content\css\app.css" />
     <Content Include="Content\css\bootstrap-theme.min.css" />
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\img\background.jpg" />
     <Content Include="Content\img\book.png" />
+    <Content Include="Content\img\one-punch-man.png" />
+    <Content Include="errors\error-page.aspx" />
     <Content Include="login.aspx" />
     <Content Include="packages.config" />
-    <Content Include="master.Master" />
+    <Content Include="base.Master" />
+    <Content Include="child.master" />
+    <Content Include="errors\Web.config" />
     <None Include="Properties\PublishProfiles\agendaProfile.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -92,7 +97,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="contactos\contactos.aspx" />
     <Content Include="default.aspx" />
     <Content Include="Global.asax" />
     <None Include="Scripts\_references.js" />
@@ -102,6 +106,20 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="base.Master.cs">
+      <DependentUpon>base.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="base.Master.designer.cs">
+      <DependentUpon>base.Master</DependentUpon>
+    </Compile>
+    <Compile Include="child.master.cs">
+      <DependentUpon>child.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="child.master.designer.cs">
+      <DependentUpon>child.master</DependentUpon>
+    </Compile>
     <Compile Include="contactos\contactos.aspx.cs">
       <DependentUpon>contactos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -123,6 +141,13 @@
     <Compile Include="default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="errors\error-page.aspx.cs">
+      <DependentUpon>error-page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="errors\error-page.aspx.designer.cs">
+      <DependentUpon>error-page.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -133,13 +158,6 @@
     </Compile>
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="master.Master.cs">
-      <DependentUpon>master.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="master.Master.designer.cs">
-      <DependentUpon>master.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserControl\delete-modal.ascx.cs">

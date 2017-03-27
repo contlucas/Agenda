@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Crear un nuevo contacto" Language="C#" MasterPageFile="~/master.Master" AutoEventWireup="true" CodeBehind="create.aspx.cs" Inherits="Agenda.Presentation.contactos.create" %>
+﻿<%@ Page Title="Crear contacto" Language="C#" MasterPageFile="~/child.master" AutoEventWireup="true" CodeBehind="create.aspx.cs" Inherits="Agenda.Presentation.contactos.create" %>
 
 <asp:Content ContentPlaceHolderID="head" runat="server" ClientIDMode="Static">
 </asp:Content>
@@ -31,7 +31,7 @@
             <asp:HyperLink runat="server" CssClass="btn btn-default" role="button"
                 NavigateUrl="~/contactos/contactos.aspx">Cancelar</asp:HyperLink>
             <asp:Button ID="btnGuardar" runat="server" CssClass="btn btn-success"
-                Text="Guardar" 
+                Text="Guardar"
                 OnClientClick="return confirm('¿Desea guardar los cambios?'"
                 OnClick="btnGuardar_Click" />
         </div>

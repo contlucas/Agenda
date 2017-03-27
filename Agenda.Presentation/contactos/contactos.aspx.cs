@@ -4,21 +4,29 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Web.Security;
 using Agenda.Model;
 
 namespace Agenda.Presentation.contactos
 {
-    public partial class contactos : System.Web.UI.Page, IAccionPage
+    public partial class contactos : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!this.IsPostBack)
+            if (User.Identity.IsAuthenticated)
             {
-                using (AgendaModel db = new AgendaModel())
+                if (!this.IsPostBack)
                 {
-                    this.repeater.DataSource = db.Contacto.AsNoTracking().ToList();
-                    this.repeater.DataBind();
+                    using (AgendaModel db = new AgendaModel())
+                    {
+                        this.repeater.DataSource = db.Contacto.AsNoTracking().ToList();
+                        this.repeater.DataBind();
+                    }
                 }
+            }
+            else
+            {
+                FormsAuthentication.RedirectToLoginPage();
             }
         }
         public void Delete(int id)
