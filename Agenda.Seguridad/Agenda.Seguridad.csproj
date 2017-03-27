@@ -4,12 +4,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B1D27902-A8D4-4EEB-A7C3-3A8C14B810FB}</ProjectGuid>
+    <ProjectGuid>{5A6CE053-8FDB-4E0B-92BF-9C3AF005BA2F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Agenda.Model</RootNamespace>
-    <AssemblyName>Agenda.Model</AssemblyName>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <RootNamespace>Agenda.Seguridad</RootNamespace>
+    <AssemblyName>Agenda.Seguridad</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -41,8 +41,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,56 +50,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AgendaModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AgendaModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AgendaModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AgendaModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AgendaModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AgendaModel.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Contacto.cs">
-      <DependentUpon>AgendaModel.tt</DependentUpon>
-    </Compile>
+    <Compile Include="SeguridadA.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Usuario.cs">
-      <DependentUpon>AgendaModel.tt</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="AgendaModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>AgendaModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
+    <ProjectReference Include="..\Agenda.Model\Agenda.Model.csproj">
+      <Project>{b1d27902-a8d4-4eeb-a7c3-3a8c14b810fb}</Project>
+      <Name>Agenda.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="AgendaModel.edmx.diagram">
-      <DependentUpon>AgendaModel.edmx</DependentUpon>
-    </None>
-    <None Include="App.Config" />
+    <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="AgendaModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>AgendaModel.Context.cs</LastGenOutput>
-      <DependentUpon>AgendaModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="AgendaModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>AgendaModel.edmx</DependentUpon>
-      <LastGenOutput>AgendaModel.cs</LastGenOutput>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
