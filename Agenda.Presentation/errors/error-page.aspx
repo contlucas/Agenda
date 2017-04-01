@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/base.Master" AutoEventWireup="true" CodeBehind="error-page.aspx.cs" Inherits="Agenda.Presentation.errors.error_page" %>
+﻿<%@ Page Title="Error" Language="C#" MasterPageFile="~/base.Master" AutoEventWireup="true" CodeBehind="error-page.aspx.cs" Inherits="Agenda.Presentation.errors.error_page" %>
 
 <asp:Content ContentPlaceHolderID="head" runat="server">
 </asp:Content>

@@ -73,9 +73,9 @@ namespace Agenda.Presentation.contactos
                 else
                     contacto = new Contacto();
 
-                contacto.Nombre = this.getFormValueFromKey("ctl00$content$txtNombre").ToString();
-                contacto.Apellido = this.getFormValueFromKey("ctl00$content$txtApellido").ToString();
-                contacto.Edad = Convert.ToInt32(this.getFormValueFromKey("ctl00$content$txtEdad"));
+                contacto.Nombre = this.getFormValueFromKey("ctl00$ctl00$content$content$txtNombre").ToString();
+                contacto.Apellido = this.getFormValueFromKey("ctl00$ctl00$content$content$txtApellido").ToString();
+                contacto.Edad = Convert.ToInt32(this.getFormValueFromKey("ctl00$ctl00$content$content$txtEdad"));
                 contacto.Usuario = User.Identity.Name;
                 contacto.FechaCreacion = DateTime.Now;
 

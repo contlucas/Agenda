@@ -49,6 +49,7 @@ namespace Agenda.Seguridad
 
     public enum Algoritmo
     {
-        SHA1
+        SHA1,
+        MD5
     }
 }

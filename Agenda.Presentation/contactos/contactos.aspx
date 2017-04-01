@@ -2,6 +2,9 @@
 
 <%@ Register Src="~/UserControl/delete-modal.ascx" TagPrefix="modal" TagName="delete" %>
 <asp:Content ContentPlaceHolderID="head" runat="server">
+    <script type="text/javascript">
+        function deleteContacto(id) { $("#hdmValue").val(id); }
+    </script>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="content" runat="server">
     <modal:delete runat="server"

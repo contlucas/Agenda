@@ -9,7 +9,7 @@ using Agenda.Model;
 
 namespace Agenda.Presentation.contactos
 {
-    public partial class contactos : System.Web.UI.Page
+    public partial class contactos : System.Web.UI.Page, IAccionPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {

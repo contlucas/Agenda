@@ -24,24 +24,40 @@ namespace Agenda.Presentation.errors
 
             if (hex != null)
             {
-                this.statusCode = hex.GetHttpCode();
+                //this.statusCode = hex.GetHttpCode();
 
-                switch (this.statusCode)
-                {
-                    case 404:
-                        {
-                            this.encabezadoPage = "Pagina no encontrada";
-                            this.mensajePage = "La página web que esta buscando no se encuentra o fue removida a otro servidor.";
-                            this.Title = this.encabezadoPage;
-                            break;
-                        }
-                    default:
-                        {
-                            break;
-                        }
-                }
+                //switch (this.statusCode)
+                //{
+                //    case 404:
+                //        {
+                //            this.encabezadoPage = "Pagina no encontrada";
+                //            this.mensajePage = "La página web que esta buscando no se encuentra o fue removida a otro servidor.";
+                //            this.Title = this.encabezadoPage;
+                //            break;
+                //        }
+                //    default:
+                //        {
+                //            break;
+                //        }
+                //}
             }
 
+            this.statusCode = Convert.ToInt32(Request.QueryString["statusCode"]);
+
+            switch (this.statusCode)
+            {
+                case 404:
+                    {
+                        this.encabezadoPage = "Pagina no encontrada";
+                        this.mensajePage = "La página web que esta buscando no se encuentra o fue removida a otro servidor.";
+                        this.Title = this.encabezadoPage;
+                        break;
+                    }
+                default:
+                    {
+                        break;
+                    }
+            }
 
             Server.ClearError();
         }
